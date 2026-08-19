@@ -70,7 +70,7 @@ export default function ProductDemo() {
           <p className={styles.sub}>
             We don't track 200 things. We track the 4 signals that DORA research
             identified as the strongest predictors of engineering team health.
-            Click the toggle — this is real data, not a screenshot.
+            Click the toggle — live UI with sample data, not a static screenshot.
           </p>
 
           <div className={styles.toggle} role="group" aria-label="Select time period">

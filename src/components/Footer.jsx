@@ -30,7 +30,7 @@ export default function Footer() {
             <span className={styles.colTitle}>Company</span>
             <a href="#">About</a>
             <a href="#">Blog</a>
-            <a href="#">Contact</a>
+            <a href="#cta">Contact</a>
           </div>
           <div className={styles.col}>
             <span className={styles.colTitle}>Legal</span>

@@ -51,8 +51,8 @@ export default function CTA() {
                   <span className="gradient-text">team's cadence?</span>
                 </h2>
                 <p className={styles.sub}>
-                  Join 47 engineering teams already on the waitlist.
-                  No credit card. No commitment. First 50 teams get lifetime free access.
+                  Request early access for your team.
+                  No credit card. No commitment.
                 </p>
 
                 <form className={styles.form} onSubmit={handleSubmit} id="cta-form">
@@ -98,9 +98,10 @@ export default function CTA() {
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ type: 'spring', damping: 16 }}
               >
-                <div className={styles.successIcon}>🚀</div>
-                <h3>You're on the list.</h3>
-                <p>We'll reach out at <strong>{email}</strong> when your slot is ready.</p>
+                <div className={styles.successIcon}>✓</div>
+                <h3>Thanks — demo received.</h3>
+                <p>We'd reach out at <strong>{email}</strong> if this form were live.</p>
+                <p className={styles.demoNote}>Demo only — no email is stored.</p>
               </motion.div>
             )}
           </div>

@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { ArrowRight, GitPullRequest, Zap, Activity, Shield } from 'lucide-react'
+import { ArrowRight, Zap, Activity, Shield } from 'lucide-react'
 import useParallax from '../hooks/useParallax'
 import styles from '../styles/Hero.module.css'
 
@@ -202,18 +202,8 @@ export default function Hero() {
     setTimeout(() => setShowBurst(false), 2000)
   }, [])
 
-  // Auto-run the animation every 7 seconds so the page feels alive
-  useEffect(() => {
-    const interval = setInterval(() => {
-      triggerDeploy()
-    }, 7000)
-    return () => clearInterval(interval)
-  }, [triggerDeploy])
-
   return (
     <section className={styles.hero} id="hero">
-      {/* Three.js handles the background - no CSS orbs needed */}
-
       <div className={`container ${styles.content}`}>
         <motion.div
           className={styles.text}
@@ -223,13 +213,13 @@ export default function Hero() {
         >
           <div className={styles.badge}>
             <span className={styles.badgeDot} />
-            Now in beta — 47 engineering teams on the waitlist
+            Now in beta — early access open
           </div>
 
           <h1 className={styles.headline}>
             Your team has<br />
             a{' '}
-            <span className={styles.glitch} data-text="rhythm.">rhythm.</span><br />
+            <span className="gradient-text">rhythm.</span><br />
             <span className="gradient-text">Make it visible.</span>
           </h1>
 
@@ -256,14 +246,9 @@ export default function Hero() {
           
           <PipelineVisualizer isDeploying={isDeploying} onComplete={onDeployComplete} />
 
-          <div className={styles.socialRow}>
-            <div className={styles.avatars}>
-              {['#6366f1','#8b5cf6','#22d3ee','#10b981'].map((c, i) => (
-                <div key={i} className={styles.avatar} style={{ background: c, zIndex: 4 - i }} />
-              ))}
-            </div>
-            <span>Joined by engineers from Stripe, Vercel, and Linear</span>
-          </div>
+          <p className={styles.trustLine}>
+            Webhook-driven · Metadata only · No agents to install
+          </p>
         </motion.div>
 
         <motion.div

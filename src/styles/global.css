@@ -59,6 +59,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: var(--nav-height);
   font-size: 16px;
 }
 
@@ -70,7 +71,6 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
-  cursor: none;
 }
 
 /* Ultra-subtle scanline overlay — gives premium CRT depth */
@@ -166,4 +166,10 @@ h1, h2, h3, h4, h5, h6 {
 @media (max-width: 768px) {
   .container { padding: 0 1.25rem; }
   .section { padding: 4rem 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
 }

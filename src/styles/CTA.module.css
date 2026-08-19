@@ -152,6 +152,13 @@
   font-size: 0.9rem;
 }
 
+.demoNote {
+  margin-top: 0.75rem;
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  font-style: italic;
+}
+
 @media (max-width: 540px) {
   .form { flex-direction: column; }
   .btn { width: 100%; justify-content: center; }

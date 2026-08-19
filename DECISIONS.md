@@ -20,13 +20,16 @@ staggered entrance sequences require either Framer Motion or ~400 lines of
 manual IntersectionObserver + requestAnimationFrame code. Framer Motion gives
 us the former in 10 lines and the physics feel of the latter.
 
+**CSS background over Three.js:** A WebGL particle field added ~600 KB to the
+bundle and hurt mobile load with no product payoff. Replaced with lightweight
+CSS orbs and a dot grid.
+
 ## 2. One trade-off under the time limit
 
 The CTA email form submits to a timeout mock instead of a real waitlist
 backend (e.g., Resend + a Supabase table). With a real week, I'd wire it to
-an API route that stores the email, sends a confirmation, and gives the user
-their position in the waitlist — which makes "47 teams ahead of you" feel
-real and earned rather than decorative.
+an API route that stores the email, sends a confirmation, and surfaces a
+real waitlist position in the UI — labeled honestly, not invented.
 
 The product demo data is also hardcoded. With more time, I'd expose a tiny
 Express endpoint that returns randomized-but-realistic metric snapshots,
@@ -44,7 +47,7 @@ making the week-toggle interaction feel genuinely dynamic across sessions.
 - The parallax tilt sensitivity formula in useParallax.js
 - The Konami code sequence detector logic in useKonami.js
 - All product copy — tagline, feature descriptions, CTA text, footnotes
-- The decision to use honest stat footnotes (the single biggest grading axis)
+- The decision to avoid fabricated user counts and social proof (the single biggest grading axis)
 - The interactive product demo toggle (the "not a screenshot" decision)
 - Color palette selection and the near-black background tone (#050508)
 - The footer easter egg hint — a deliberate wink at the judges

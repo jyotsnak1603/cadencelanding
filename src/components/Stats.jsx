@@ -3,10 +3,10 @@ import useCountUp from '../hooks/useCountUp'
 import styles from '../styles/Stats.module.css'
 
 const STATS = [
-  { target: 47, suffix: '+', label: 'Teams\non waitlist', note: 'As of Aug 2026' },
   { target: 4,  suffix: '',  label: 'DORA\nmetrics',    note: 'All four. Nothing else.' },
   { target: 5,  suffix: 'm', prefix: '<', label: 'Setup\ntime',   note: 'To your first metric' },
   { target: 0,  suffix: '',  label: 'Lines of code\nwe store', note: 'Metadata only' },
+  { target: 60, suffix: 's', prefix: '<', label: 'To revoke\naccess', note: 'From any integration screen' },
 ]
 
 function Stat({ target, suffix, prefix = '', label, note, index }) {

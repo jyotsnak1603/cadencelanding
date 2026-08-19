@@ -1,5 +1,4 @@
-import Background3D from './components/Background3D'
-import CustomCursor from './components/CustomCursor'
+import Background from './components/Background'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import SocialProof from './components/SocialProof'
@@ -14,8 +13,7 @@ import EasterEgg from './components/EasterEgg'
 export default function App() {
   return (
     <>
-      <Background3D />
-      <CustomCursor />
+      <Background />
       <EasterEgg />
       <div style={{ position: 'relative', zIndex: 1 }}>
         <Navbar />
