@@ -4,7 +4,7 @@ Developer velocity intelligence for engineering leads. A landing page built for 
 
 ## Live demo
 
-https://acdyonassessment-three.vercel.app
+https://cadencelanding-five.vercel.app
 
 ## What to try (60-second reviewer path)
 
